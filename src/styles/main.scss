@@ -3,6 +3,7 @@
 @import '_fight.scss';
 @import '_play.scss';
 @import '_sleep.scss';
+@import '_quadrant.scss';
 
 body {
   background-color: white;
@@ -11,21 +12,12 @@ body {
 }
 
 #app {
-  // border: 1px solid white;
   display: grid;
-
-  // justify-content: space-evenly;
-  // width: 1200px;
-  // margin: 10px;
-  // padding: 10px;
-  // flex-wrap: wrap;
   display: grid;
   grid-template-columns: 50vw 50vw;
   grid-template-rows: 10vh 45vh 45vh;
 }
 
-
-
-// .quad {
-
-// }
+.quad {
+  font-size: 2em;
+ }
