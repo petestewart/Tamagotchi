@@ -4,7 +4,7 @@ import play from './components/play';
 import fight from './components/fight';
 import sleep from './components/sleep';
 import '@fortawesome/fontawesome-free';
-// import quad from './components/quadrant';
+import 'jquery';
 
 const init = () => {
   eat.makeQuad();
