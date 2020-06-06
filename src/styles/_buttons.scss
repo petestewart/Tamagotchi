@@ -1,0 +1,44 @@
+.quad-buttons {
+
+  i {font-size: 5em;
+  }
+
+  .button {
+    background-color: slategray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 3em;
+    border: 0.15em solid #FFFFFF;
+    border-radius: 15px;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.15s;
+    width: 40%;
+    font-size: 0.7em;
+  }
+
+  .button:hover {
+    background-color: rgb(151, 173, 194);
+  }
+
+  .button:active {
+    background-color: rgb(92, 105, 118);
+    box-shadow: 0 5px rgb(63, 63, 63);
+    transform: translateY(4px);
+    color: white !important;
+  }
+
+  .btn-descr {
+    font-size: .7em;
+    font-weight: 500;
+    // color: rgba(0, 0, 0, 0.625);
+    color: silver;
+    margin: 10px 0px 0px 0px;
+  }
+}
