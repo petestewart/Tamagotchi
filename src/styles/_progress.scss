@@ -3,4 +3,20 @@
   grid-column-start: 1;
   grid-column-end: 3;
   color: white;
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
 }
+
+#progress-bar {
+  background-color: green;
+  min-height: 50px;
+}
+
+#total-score {
+  color: white;
+  padding: 25px;
+  font-size: 2.5em;
+  font-family: monospace;
+}
+

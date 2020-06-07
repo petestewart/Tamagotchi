@@ -31,7 +31,8 @@ const setLevel = (buttonId) => {
 };
 
 const getScore = () => {
-  const score = levels.full + levels.fun + levels.strength + levels.sleep;
+  let score = (levels.full + levels.fun + levels.strength + levels.energy);
+  score = Math.round((score / 400) * 100);
   return score;
 };
 
