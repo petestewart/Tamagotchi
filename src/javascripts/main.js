@@ -16,5 +16,3 @@ const init = () => {
 };
 
 init();
-
-console.error('testing');

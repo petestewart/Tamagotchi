@@ -20,6 +20,25 @@ const getLevel = (category) => (levels[category]);
 
 const getLevels = () => (levels);
 
+const moduleInteract = (category, amount) => {
+  const halfAmount = Math.round(amount / 2);
+  if (category === 'full' && amount > 0) {
+    levels.energy -= halfAmount;
+  } else if (category === 'full') {
+    levels.strength += halfAmount;
+  } else if (category === 'strength' && amount < 0) {
+    levels.energy += halfAmount;
+    levels.full += halfAmount;
+    levels.fun += halfAmount;
+  } else if (category === 'strength') {
+    levels.energy += halfAmount;
+  } else if (category === 'energy' && amount < 0) {
+    levels.fun += halfAmount;
+  } else if (category === 'fun' && amount > 0) {
+    levels.energy -= Math.round(halfAmount / 2);
+  }
+};
+
 const setLevel = (buttonId) => {
   const result = actions[buttonId];
   const category = result[0];
@@ -28,6 +47,7 @@ const setLevel = (buttonId) => {
   if (levels[category] > 100) {
     levels[category] = 100;
   }
+  moduleInteract(category, amount);
 };
 
 const getScore = () => {
