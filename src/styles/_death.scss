@@ -1,0 +1,52 @@
+.dead {
+animation: rotation 3s normal linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.deathscreen {
+  margin: auto;
+  // top: -10px;
+  font-size: 55vw;
+  z-index: 2;
+  color: grey;
+  opacity: 1;  
+  animation: flickerAnimation 2s infinite;
+}
+
+#restart-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid slategray;
+  border-radius: 15px;
+  height: 100px;
+  width: 500px;
+  background-color: blue;
+  font-size: 65px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 50px;
+  margin-left: -250px;
+  z-index: 4;
+}
+#restart-button:active {
+  transform: translateY(4px);
+}
+
+@keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
