@@ -42,7 +42,8 @@ const moduleInteract = (category, amount) => {
 const setLevel = (buttonId) => {
   const result = actions[buttonId];
   const category = result[0];
-  const amount = result[1];
+  let amount = result[1];
+  amount += Math.round((amount * ((Math.random() * 2) - 1)));
   levels[category] += amount;
   if (levels[category] > 100) {
     levels[category] = 100;
